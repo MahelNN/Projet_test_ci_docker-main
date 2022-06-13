@@ -3,10 +3,10 @@ name : CI
 on : [push]
 
 jobs : 
-      test_build_run_push
+      test_build_run_push :
           runs on : ubuntu:latest
           steps: 
-              - uses : actions/checkout@v2
+              - uses : actions/checkout@v3
               - name : Run tests
                 run : |
                       pip install pytest
@@ -17,3 +17,4 @@ jobs :
               - name : run docker image
                 run : 
                       docker run valid_password
+
