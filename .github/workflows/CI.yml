@@ -4,19 +4,25 @@ on : [push]
 
 jobs : 
       test_build_run_push :
-          runs-on : ubuntu-latest
-          steps: 
-              - uses : actions/checkout@v3
-              - name : Run tests
-                run : |
-                      pip install pytest
-                      pytest test_functions.py
-                      
-              - name : build docker image
-                run : 
-                      docker build -t valid_password .
-              - name : run docker image
-                run : 
-                      docker run valid_password
+            runs-on : ubuntu-latest
+            steps: 
+            - uses : actions/checkout@v3
+            - name : Run tests
+                  run : |
+                        pip install pytest
+                        pytest test_functions.py
 
+            - name : build docker image
+                  run : 
+                        docker build -t valid_password .
+            - name : run docker image
+                  run : 
+                        docker run valid_password
+            - name : build and push docker image
+                  uses: mr-smithers-excellent/docker-build-push@v5
+                  with:
+                  image: projettestcidockermain/valid_password
+                  registry: docker.io
+                  username: ${{ secrets.DOCKER_USERNAME }}
+                  password: ${{ secrets.DOCKER_PASSWORD }}
 
