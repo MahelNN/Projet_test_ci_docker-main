@@ -7,9 +7,6 @@ jobs :
             runs-on : ubuntu-latest
             steps: 
             - uses : actions/checkout@v3
-            - name : Additional packages
-              run : 
-                  sudo apt-get install apt-utils
             - name : Run tests
               run : |
                   pip install pytest
