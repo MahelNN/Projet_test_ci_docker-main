@@ -11,7 +11,7 @@ jobs :
               run : |
                   python --version
                   pip install pytest
-                  pytest -v
+                  pytest --version
 
             - name : build docker image
               run : 
