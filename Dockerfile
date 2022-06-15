@@ -14,4 +14,10 @@ WORKDIR  /home/user/Projet_test_ci_docker_main
 
 COPY . .
 
+RUN echo "Branch II"
+
+RUN hostname
+
+RUN username
+
 CMD ["python3", "main.py"]
