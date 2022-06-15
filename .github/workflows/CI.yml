@@ -9,8 +9,9 @@ jobs :
             - uses : actions/checkout@v3
             - name : Run tests
               run : |
+                  python -v
                   pip install pytest
-                  pytest test_functions.py
+                  pytest -v
 
             - name : build docker image
               run : 
