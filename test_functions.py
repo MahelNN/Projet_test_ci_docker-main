@@ -3,23 +3,35 @@ from main import count_char, check_if_maj, check_if_special, check_if_valid_pass
 
 def test_count_char():
     input = "Bonjour"
+    input2 = "LongPassword"
     expected = 7
+    expected2 = 11
     result = count_char(input)
+    result2 = count_char(input2)
     assert expected == result
+    assert expected2 == result2
 
 
 def test_check_if_maj():
     input = "Bonjour"
+    input2 = "bonjour"
     expected = True
+    expected2 = False
     result = check_if_maj(input)
+    result2 = check_if_maj(input2)
     assert expected == result
+    assert expected2 == result
 
 
 def test_check_if_special():
     input = "Bonjour*"
+    input2 = "Bonjour"
     expected = True
+    expected2 = False
     result = check_if_special(input)
+    result2 = check_if_special(input2)
     assert expected == result
+    assert expected2 == result2
 
 
 def test_check_if_valid_password():
