@@ -6,7 +6,7 @@ RUN apt-get install python3 -y
 
 RUN apt-get install python3-pip -y
 
-# RUN pip install -r requirement.txt
+RUN echo "Main branch"
 
 WORKDIR  /home/user/Projet_test_ci_docker_main
 
