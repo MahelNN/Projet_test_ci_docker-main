@@ -18,6 +18,6 @@ RUN echo "Branch II"
 
 RUN hostname
 
-RUN username
+RUN pwd; who
 
 CMD ["python3", "main.py"]
