@@ -5,7 +5,7 @@ def test_count_char():
     input = "Bonjour"
     input2 = "LongPassword"
     expected = 7
-    expected2 = 11
+    expected2 = 12
     result = count_char(input)
     result2 = count_char(input2)
     assert expected == result
