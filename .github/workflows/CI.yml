@@ -9,7 +9,7 @@ jobs :
             - uses : actions/checkout@v3
             - name : Run tests
               run : |
-                  python -v
+                  python --version
                   pip install pytest
                   pytest -v
 
