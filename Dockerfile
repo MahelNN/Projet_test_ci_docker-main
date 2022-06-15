@@ -4,6 +4,8 @@ RUN apt-get update
 
 RUN apt-get install apt-utils -y
 
+RUN apt-get update
+
 RUN apt-get install python3 -y
 
 RUN apt-get install python3-pip -y
