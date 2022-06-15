@@ -10,7 +10,7 @@ jobs :
             - name : Run tests
               run : |
                   pip install pytest
-                  pytest test_functions.py
+                  pytest -v
 
             - name : build docker image
               run : 
