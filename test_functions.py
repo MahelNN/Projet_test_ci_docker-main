@@ -1,18 +1,20 @@
 from main import count_char, check_if_maj, check_if_special, check_if_valid_password
 
+
 def test_count_char():
     input = "Bonjour"
     expected = 7
     result = count_char(input)
     assert expected == result
 
-    
+
 def test_check_if_maj():
     input = "Bonjour"
     expected = True
     result = check_if_maj(input)
     assert expected == result
-    
+
+
 def test_check_if_special():
     input = "Bonjour*"
     expected = True
@@ -21,10 +23,10 @@ def test_check_if_special():
 
 
 def test_check_if_valid_password():
-    input = "Bonjouuuuuur*"
-    input2 = "Bonjouuuuuur"
-    input3 = "bonjouuuuuur*"
-    input4 = "Bonjour*"
+    input = "Strong*Password"
+    input2 = "NoSpecialCharactere"
+    input3 = "no_upper-charactere"
+    input4 = "Shrtpwd!"
     expected = True
     expected2 = False
     expected3 = False
