@@ -20,7 +20,7 @@ def test_check_if_maj():
     result = check_if_maj(input)
     result2 = check_if_maj(input2)
     assert expected == result
-    assert expected2 == result
+    assert expected2 == result2
 
 
 def test_check_if_special():
