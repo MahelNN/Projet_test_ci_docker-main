@@ -9,7 +9,7 @@ jobs :
             - uses : actions/checkout@v3
             - name : Additional packages
               run : 
-                  apt-get install apt-utils
+                  sudo apt-get install apt-utils
             - name : Run tests
               run : |
                   pip install pytest
